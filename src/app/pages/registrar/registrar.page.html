@@ -1,0 +1,47 @@
+<ion-content class="ion-content-2">
+  <ion-card class="card-registro">
+    <ion-card-header>
+      <div>
+        <h2 class="titulo-registro">Registrate aquí</h2>
+      </div>
+    </ion-card-header>
+    <ion-card-content class="ion-card-reg">
+      <form [formGroup]="alumno" (ngSubmit)="registrar()">
+        <ion-item>
+          <ion-label position="stacked">Rut</ion-label>
+          <ion-input type="text" placeholder="00.000.000-0" formControlName="rut"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Email</ion-label>
+          <ion-input type="text" placeholder="algo@algo.cl" formControlName="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Nombre completo</ion-label>
+          <ion-input type="text" placeholder="Ingrese nombre" formControlName="nom_completo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Fecha nacimiento</ion-label>
+          <ion-input type="date" placeholder="Ingrese fecha nacimiento" formControlName="fecha_nac"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Semestre</ion-label>
+          <ion-input type="number" placeholder="Ingrese semestre" formControlName="semestre"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Contraseña</ion-label>
+          <ion-input type="password" placeholder="Ingrese contraseña" formControlName="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Repita Contraseña</ion-label>
+          <ion-input type="password" placeholder="Ingrese nuevamente contraseña" [(ngModel)]="verificar_password"
+            [ngModelOptions]="{standalone: true}"></ion-input>
+        </ion-item>
+        <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
+          <ion-button class="btn-registrar" type="submit" color="warning" [disabled]="!alumno.valid">REGISTRAR
+          </ion-button>
+          <ion-button class="btn-volver" slot="end" routerLink="/login">VOLVER</ion-button>
+        </div>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

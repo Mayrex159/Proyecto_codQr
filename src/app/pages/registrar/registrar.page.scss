@@ -1,0 +1,77 @@
+
+//Cssimagen de fondo
+.ion-content-2 {
+    width: 100%;
+    background-image: url("../../../assets/icon/registro.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+//Css opacidad de imagen de fondo
+.ion-content-2:before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    opacity: 0.5;
+}
+
+//Css card registro
+.card-registro{
+    margin: 0 auto;
+    top: 5vh;
+    height: 90vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.605);
+}
+
+//Css titulo card registro
+.titulo-registro {
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    font-style: italic;
+    font-family: serif;
+    color: black;
+}
+
+//Css btn "registrar" registro
+.btn-registrar {
+    margin-top: 20px;
+    display: block;
+    width: 100px;
+    font-family: serif;
+    font-style: italic;
+    font-weight: bold;
+    --border-radius: 10px;
+}
+
+//Css btn "Volver" registro
+.btn-volver {
+    margin-top: 20px;
+    display: block;
+    width: 100px;
+    font-family: serif;
+    font-style: italic;
+    font-weight: bold;
+    --background: none;
+    --border-radius: 10px;
+    border-radius: 10px;
+    background-color: rgb(77, 77, 77);
+}
+
+//Media registro
+@media (max-width: 400px) {
+    .ion-content-2 {
+        .card-registro {
+            height: 100vh;
+            width: 90vw;
+        }
+    }
+}

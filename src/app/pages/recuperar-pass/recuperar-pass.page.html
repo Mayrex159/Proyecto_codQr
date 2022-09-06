@@ -1,0 +1,19 @@
+<ion-content class="ion-content-3">
+  <ion-card class="card-recuperar-pass">
+    <ion-card-header>
+      <div class="titulo-recuperar-pass">
+        <span>Recuperar contraseña</span>
+      </div>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-input type="text" placeholder="algo@algo.cl" [(ngModel)]="verEmail"></ion-input>
+      </ion-item>
+    </ion-card-content>
+    <div style="display: flex; flex-direction: row; justify-content: space-evenly;">
+      <ion-button class="btn-enviar" color="warning" (click)="validarEmail()">Enviar</ion-button>
+      <ion-button class="btn-volver" slot="end" routerLink="/login">Volver</ion-button>
+    </div>
+  </ion-card>
+</ion-content>

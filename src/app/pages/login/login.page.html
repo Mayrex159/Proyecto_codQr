@@ -1,0 +1,27 @@
+
+
+<ion-content class="ion-content-1">
+  <ion-card class="card-login">
+    <ion-card-header>
+      <div class="titulo-login">
+        Registr<span>APP</span>
+      </div>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-input type="text" placeholder="algo@algo.cl" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Contraseña</ion-label>
+        <ion-input type="password" placeholder="Ingrese contraseña" [(ngModel)]="password"></ion-input>
+      </ion-item>
+    </ion-card-content>
+    <ion-button class="btn-ingresar" color="warning" (click)="login()">INGRESAR</ion-button>
+
+    <div class="links">
+      <p>¿No tienes una cuenta?<a routerLink='/registrar'>Regístrate...</a></p>
+      <p><a routerLink='/recuperar-pass'>¿Olvidaste tu contraseña?</a></p>
+    </div>
+  </ion-card>
+</ion-content>

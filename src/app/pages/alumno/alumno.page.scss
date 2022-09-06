@@ -1,0 +1,68 @@
+
+//Css contenido menú
+.content-menu{
+    ion-list{
+        ion-item{
+            a{
+                text-decoration: none;
+                color: black;
+                font-family: serif;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+//Css opacidad de imagen de fondo
+.ion-content-4:before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    //position: absolute;
+    opacity: 0.5;
+}
+
+//Css card alumno
+.card-alumno{
+    margin: 0 auto;
+    top: 5vh;
+    height: 50vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.605);
+    justify-content: center;
+}
+
+//Css boton registrar asistencia
+.btn-regAsis {
+    font-family: serif;
+    font-style: italic;
+    font-weight: bold;
+    --border-radius: 5px;
+}
+
+//Media alumno
+@media (max-width: 400px) {
+    .ion-content-4 {
+        .card-alumno {
+            width: 90vw;
+            height: 70vh;
+        }
+    }
+}
+
+@media (min-width: 401px) {
+    .ion-content-4 {
+        .card-alumno {
+            img{
+                width: 95%;
+            }
+            width: 90vw;
+            height: 70vh;
+        }
+    }
+}
